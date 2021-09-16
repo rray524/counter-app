@@ -10,9 +10,10 @@ document.querySelector('.add').addEventListener('click', () => {
     if (count > 0) {
         increasedText.style.color = 'yellow'
     }
-    else {
+    else if (count === 0) {
         increasedText.style.color = 'white'
     }
+
 })
 
 // subtract button event handler
@@ -24,9 +25,10 @@ document.querySelector('.subtract').addEventListener('click', () => {
     if (count < 0) {
         decreasedText.style.color = 'red'
     }
-    else {
+    else if (count === 0) {
         decreasedText.style.color = 'white'
     }
+
 })
 
 // Reset button handler
@@ -34,4 +36,5 @@ document.querySelector('.reset').addEventListener('click', () => {
     let currentText = document.getElementById('count');
     currentText.innerText = 0;
     currentText.style.color = 'white'
-})
+});
+
